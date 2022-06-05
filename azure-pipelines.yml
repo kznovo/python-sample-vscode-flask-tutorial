@@ -29,9 +29,3 @@ steps:
     pip install flake8
     flake8 .
   displayName: 'Run lint tests'
-
-- task: PublishTestResults@2
-  condition: succeededOrFailed()
-  inputs:
-    testResultsFiles: '**/test-*.xml'
-    testRunTitle: 'Publish test results for Python $(python.version)'
